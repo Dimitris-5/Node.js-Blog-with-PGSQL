@@ -44,3 +44,5 @@ Server Configuration:
 
 Listens on port 3000 for incoming requests.
 This application demonstrates the use of Express.js for building a web application with dynamic content, PostgreSQL for data storage, and EJS for rendering views, integrating external APIs to enhance functionality.
+
+Use the code in the queries.sql file to create the database
