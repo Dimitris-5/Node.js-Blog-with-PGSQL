@@ -1,0 +1,44 @@
+<%- include('partials/header.ejs');-%>
+
+      <!-- Page Header Start -->
+      <div class="container py-5 px-2 bg-primary">
+        <div class="row py-5 px-4">
+            <div class="col-sm-6 text-center text-md-left">
+                <h1 class="mb-3 mb-md-0 text-white text-uppercase font-weight-bold"><%= single_book.title%></h1>
+            </div>
+            <div class="col-sm-6 text-center text-md-right">
+                <div class="d-inline-flex pt-2">
+                    <h4 class="m-0 text-white"><a class="text-white" href="">Home</a></h4>
+                    <h4 class="m-0 text-white px-2">/</h4>
+                    <h4 class="m-0 text-white"><%= single_book.title%></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Blog Detail Start -->
+    <div class="container py-5 px-2 bg-white">
+        <div class="row px-4">
+            <div class="col-12">
+                <img class="img-fluid mb-4" src="<%= single_book.poster %>" alt="Image">
+                <h2 class="mb-3 font-weight-bold"><%= single_book.title%></h2>
+                <div class="d-flex">
+                    <p class="mr-3 text-muted"><i class="fa fa-calendar-alt"></i> <%= single_book.review_date%></p>
+                    <p class="mr-3 text-muted">Genre:</i><%= single_book.genre%></p>
+                    <p class="mr-3 text-muted">Rating:</i><%= single_book.rating%></p>
+                </div>
+                <p><%= single_book.review_text %> </p>
+            </div>
+            <div class="col-12 py-4">
+                <div class="btn-group btn-group-lg w-100">
+                    <button type="button" class="btn btn-outline-primary"><i class="fa fa-angle-left mr-2"></i> Previous</button>
+                    <button type="button" class="btn btn-outline-primary">Next<i class="fa fa-angle-right ml-2"></i></button>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <!-- Blog Detail End -->
+     
+
+<%- include('partials/footer.ejs'); -%>

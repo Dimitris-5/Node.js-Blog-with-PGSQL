@@ -1,0 +1,57 @@
+<%- include('partials/header.ejs');-%>
+
+   <!-- Page Header Start -->
+   <div class="container py-5 px-2 bg-primary">
+    <div class="row py-5 px-4">
+        <div class="col-sm-6 text-center text-md-left">
+            <h1 class="mb-3 mb-md-0 text-white text-uppercase font-weight-bold"><%= book.title%></h1>
+        </div>
+        <div class="col-sm-6 text-center text-md-right">
+            <div class="d-inline-flex pt-2">
+                <h4 class="m-0 text-white"><a class="text-white" href="/">Home</a></h4>
+                <h4 class="m-0 text-white px-2">/</h4>
+                <h4 class="m-0 text-white"><%= book.title%></h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- Contact Start -->
+<div class="container bg-white pt-5">
+    <div class="row px-3 pb-2">
+        <div class="col-sm-4 text-center mb-3">
+            <!-- <i class="fa fa-2x fa-map-marker-alt mb-3 text-primary"></i> -->
+            <h4 class="font-weight-bold"><%= book.author%></h4>
+        </div>
+        <div class="col-sm-4 text-center mb-3">
+            <!-- <i class="fa fa-2x fa-phone-alt mb-3 text-primary"></i> -->
+            <h4 class="font-weight-bold"><%= book.genre%></h4>
+        </div>
+    </div>
+    <div class="col-md-12 pb-5">
+        <div class="contact-form">
+            <div class="contact-form">
+                <form class="" action="/submit-update" method="post">
+                    <div class="control-group mg-group">
+                        <textarea  class="form-control" name="review" placeholder="Review" autofocus="true"><%= book.review_text%></textarea>
+        
+                    </div>
+                    <div class="control-group mg-group">
+                        <input class="form-control" type="text" name="rating" placeholder="Rating" autofocus="true" value="<%= book.rating%>"/>
+                    </div>
+                    <div class="control-group mg-group">
+                        <input class="form-control" type="hidden" name="id" value="<%= book.book_id%>">
+                    </div>
+                    <div class="mg-group">
+                        <button class="add btn btn-primary" type="submit" name="list"> Submit</button>
+                    </div>
+                </form>
+              </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+<%- include('partials/footer.ejs'); -%>
